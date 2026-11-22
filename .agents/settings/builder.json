@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read", "Grep", "Glob", "LS", "Edit", "Write", "MultiEdit",
+      "Bash(uv:*)", "Bash(python:*)", "Bash(python3:*)", "Bash(pip:*)", "Bash(pytest:*)",
+      "Bash(ruff:*)", "Bash(alembic:*)", "Bash(uvicorn:*)", "Bash(curl:*)",
+      "Bash(git status:*)", "Bash(git diff:*)", "Bash(git add:*)", "Bash(git commit:*)",
+      "Bash(git push:*)", "Bash(git fetch:*)", "Bash(git rebase:*)", "Bash(git log:*)",
+      "Bash(gh pr create:*)", "Bash(gh pr view:*)", "Bash(gh pr comment:*)",
+      "Bash(echo:*)", "Bash(ls:*)", "Bash(cat:*)", "Bash(mkdir:*)"
+    ],
+    "deny": [
+      "Bash(gh pr merge:*)", "Bash(git push --force:*)", "Bash(git checkout main:*)"
+    ]
+  }
+}

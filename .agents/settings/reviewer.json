@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read", "Grep", "Glob", "LS",
+      "Bash(gh pr diff:*)", "Bash(gh pr view:*)", "Bash(gh pr review:*)", "Bash(gh pr checks:*)",
+      "Bash(git log:*)", "Bash(git diff:*)", "Bash(cat:*)", "Bash(ls:*)"
+    ],
+    "deny": ["Edit", "Write", "MultiEdit", "NotebookEdit", "Bash(git commit:*)", "Bash(git push:*)", "Bash(gh pr merge:*)"]
+  }
+}
