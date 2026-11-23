@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import uuid
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
@@ -37,7 +39,7 @@ client = TestClient(app)
 def task_and_author() -> tuple[int, int]:
     db = TestingSessionLocal()
     task = Task(title="Write docs")
-    user = User(email="author@example.com")
+    user = User(email=f"author-{uuid.uuid4()}@example.com", name="Author")
     db.add_all([task, user])
     db.commit()
     db.refresh(task)

@@ -22,7 +22,7 @@ from app.models.user import User
 def task_and_author() -> tuple[int, int]:
     db = SessionLocal()
     task = Task(title="Record the demo")
-    user = User(email="e2e-author@example.com")
+    user = User(email="e2e-author@example.com", name="E2E Author")
     db.add_all([task, user])
     db.commit()
     db.refresh(task)
