@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 
 from app.db import Base, engine
 from app.errors import ApiError
+from app.routers.comment import router as comment_router
 from app.routers.project import router as projects_router
 from app.routers.user import router as users_router
 
@@ -28,6 +29,7 @@ def handle_api_error(request: Request, exc: ApiError) -> JSONResponse:
 
 app.include_router(users_router)
 app.include_router(projects_router)
+app.include_router(comment_router)
 
 
 @app.get("/health")
